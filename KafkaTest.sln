@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contracts", "Contracts\Contracts.csproj", "{7F15FD3D-6734-4EE0-BF3E-D0F2689794B1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Producer", "Producer\Producer.csproj", "{93412C07-727B-4B4F-9CA8-ACF345476550}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Consumer", "Consumer\Consumer.csproj", "{7F1A2A88-985B-4CE5-80E1-839464590C8C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "Infrastructure\Infrastructure.csproj", "{534B1BE7-A1A0-4BE0-8C53-A3124BD11C86}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ProjectConfiguration", "ProjectConfiguration", "{DD4CC155-2539-471D-AFDE-51684D632744}"
+	ProjectSection(SolutionItems) = preProject
+		.env = .env
+		docker-compose.yml = docker-compose.yml
+		Dockerfile-Consumer = Dockerfile-Consumer
+		Dockerfile-Producer = Dockerfile-Producer
+		README.md = README.md
+		Dockerfile.template = Dockerfile.template
+		generate_dockerfiles.sh = generate_dockerfiles.sh
+		Test_results.md = Test_results.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7F15FD3D-6734-4EE0-BF3E-D0F2689794B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F15FD3D-6734-4EE0-BF3E-D0F2689794B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F15FD3D-6734-4EE0-BF3E-D0F2689794B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F15FD3D-6734-4EE0-BF3E-D0F2689794B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93412C07-727B-4B4F-9CA8-ACF345476550}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93412C07-727B-4B4F-9CA8-ACF345476550}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93412C07-727B-4B4F-9CA8-ACF345476550}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93412C07-727B-4B4F-9CA8-ACF345476550}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F1A2A88-985B-4CE5-80E1-839464590C8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F1A2A88-985B-4CE5-80E1-839464590C8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F1A2A88-985B-4CE5-80E1-839464590C8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F1A2A88-985B-4CE5-80E1-839464590C8C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{534B1BE7-A1A0-4BE0-8C53-A3124BD11C86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{534B1BE7-A1A0-4BE0-8C53-A3124BD11C86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{534B1BE7-A1A0-4BE0-8C53-A3124BD11C86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{534B1BE7-A1A0-4BE0-8C53-A3124BD11C86}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

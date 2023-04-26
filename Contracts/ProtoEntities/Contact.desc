@@ -1,0 +1,12 @@
+
+›
+ProtoEntities/Contact.proto"V
+ContactProto
+id (Rid
+name (	Rname"
+address (2.AddressRaddress"l
+Address
+city (	Rcity
+street (	Rstreet
+building (Rbuilding
+zip_code (	RzipCodeB.ª+KafkaTest.Contracts.ProtoEntities.Generatedbproto3

@@ -1,0 +1,15 @@
+syntax = "proto3";
+option csharp_namespace = "KafkaTest.Contracts.ProtoEntities.Generated";
+
+message ContactProto {
+  int32 id = 1;
+  string name = 2;
+  Address address = 3;
+}
+
+message Address {
+  string city = 1;
+  string street = 2;
+  int32 building = 3;
+  string zip_code = 4;
+}

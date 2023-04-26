@@ -1,0 +1,7 @@
+~*
+.*
+!.gitignore
+!.dockerignore
+!.env
+bin/
+obj/

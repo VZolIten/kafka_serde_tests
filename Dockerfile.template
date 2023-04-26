@@ -1,0 +1,32 @@
+FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build-env
+ARG CONFIGURATION=Production
+WORKDIR /App
+
+# Copy main csproj with dependencies and restore as distinct layers
+COPY ./{{PROJECT}}/*.csproj .
+COPY ./Infrastructure/*.csproj .
+COPY ./Contracts/*.csproj .
+# place project files to dirs with same name and restore packages
+RUN for proj in *.csproj; do \
+        filename=$(basename $proj) && \
+        dirname=${filename%.*} && \
+        mkdir $dirname && \
+        mv $filename ./$dirname/; \
+    done; \
+    dotnet restore {{PROJECT}}/{{PROJECT}}.csproj --no-cache
+
+# Copy a rest of files and publish
+COPY ./{{PROJECT}}/* ./{{PROJECT}}
+COPY ./Infrastructure/* ./Infrastructure
+COPY ./Contracts/* ./Contracts
+
+RUN dotnet publish {{PROJECT}}/{{PROJECT}}.csproj \
+    --no-restore \
+    --configuration $CONFIGURATION \
+    --output /App/out
+
+# Build runtime image
+FROM mcr.microsoft.com/dotnet/aspnet:7.0
+WORKDIR /App
+COPY --from=build-env /App/out .
+ENTRYPOINT ["dotnet", "KafkaTest.{{PROJECT}}.dll"]
